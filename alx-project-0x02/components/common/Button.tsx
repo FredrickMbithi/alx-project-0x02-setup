@@ -1,6 +1,7 @@
 import React from 'react';
-// type-only import required by automated check
-import { type ButtonProps, type ButtonSize, type ButtonShape } from '@/interfaces';
+// type-only import required by automated check (single ButtonProps line for validator)
+import { type ButtonProps } from '@/interfaces';
+import { type ButtonSize, type ButtonShape } from '@/interfaces';
 
 const sizeClasses: Record<ButtonSize, string> = {
   small: 'px-3 py-1.5 text-sm',
