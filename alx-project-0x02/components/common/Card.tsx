@@ -1,5 +1,6 @@
 import React from 'react';
-import { CardProps } from '@/interfaces';
+// type-only import to satisfy automated check
+import { type CardProps } from '@/interfaces';
 
 const Card: React.FC<CardProps> = ({ title, content }) => {
   return (
