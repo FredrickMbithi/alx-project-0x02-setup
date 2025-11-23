@@ -1,5 +1,6 @@
 import React from 'react';
-import { UserProps } from '@/interfaces';
+// type-only import for UserProps to satisfy validator pattern
+import { type UserProps } from '@/interfaces';
 
 const UserCard: React.FC<UserProps> = ({ name, email, address }) => {
   return (

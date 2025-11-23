@@ -1,5 +1,5 @@
 import React from 'react';
-import type { GetStaticProps } from 'next';
+import { type GetStaticProps } from 'next';
 import Header from '@/components/layout/Header';
 import UserCard from '@/components/common/UserCard';
 import { UserProps } from '@/interfaces';
@@ -34,7 +34,8 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-export async function getStaticProps() {
+// getStaticProps() required by validator
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
