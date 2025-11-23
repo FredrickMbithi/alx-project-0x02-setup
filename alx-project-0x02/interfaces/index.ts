@@ -4,10 +4,14 @@ export interface CardProps {
   content: string;
 }
 
+// Button size & shape discriminated union types
+export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonShape = 'rounded-sm' | 'rounded-md' | 'rounded-full';
+
 // ButtonProps interface
 export interface ButtonProps {
-  size: 'small' | 'medium' | 'large';
-  shape: 'rounded-sm' | 'rounded-md' | 'rounded-full';
+  size?: ButtonSize;
+  shape?: ButtonShape;
   children: React.ReactNode;
   onClick?: () => void;
 }
